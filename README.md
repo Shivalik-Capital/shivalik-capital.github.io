@@ -4,8 +4,6 @@
 
 # Shivalik Capital
 
-Independent quantitative investment research, systematic strategy development, and macroeconomic analysis.
-
 🌐 https://shivalik-capital.github.io/
 
 **Independent quantitative investment research, systematic strategy development, and macroeconomic analysis.**
