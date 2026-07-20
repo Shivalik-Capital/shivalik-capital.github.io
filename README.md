@@ -39,11 +39,9 @@ Coverage of:
 
 ---
 
-## Current Publications
+## Publications
 
-- Q2 2026 Investor Letter
-- Strategy research
-- Market commentary
+- [Q2 2026 Investor Letter](q2-2026.html)
 
 More reports will be added as research is completed.
 
@@ -63,6 +61,15 @@ Rather than relying on opinions or short-term speculation, Shivalik Capital focu
 Every strategy published includes its methodology, assumptions, and limitations.
 
 ---
+## Roadmap
+
+- ✅ Launch website
+- ✅ Publish first investor letter
+- 🔄 Publish quarterly investor letters
+- 🔄 Release quantitative research papers
+- 🔄 Interactive market dashboard
+- 🔄 Performance analytics
+- 🔄 Strategy archive
 
 ## Technology
 
@@ -71,15 +78,8 @@ This website is built using:
 - HTML
 - CSS
 - JavaScript
-- GitHub Pages
-
----
-
-## Website
-
-Visit the project:
-
-https://shivalik-capital.github.io/
+- GitHub
+- Python
 
 ---
 
