@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/image.png" alt="Shivalik Capital Banner" width="100%">
+</p>
+
 # Shivalik Capital
 
 **Independent quantitative investment research, systematic strategy development, and macroeconomic analysis.**
