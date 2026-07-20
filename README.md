@@ -2,28 +2,11 @@
   <img src="assets/image.png" alt="Shivalik Capital Banner" width="100%">
 </p>
 
-<p align="center">
-
-![Website](https://img.shields.io/badge/Website-Live-success)
-
-![Research](https://img.shields.io/badge/Research-Quantitative-blue)
-
-![Status](https://img.shields.io/badge/Status-Active-brightgreen)
-
-![Last Commit](https://img.shields.io/github/last-commit/Shivalik-Capital/shivalik-capital.github.io)
-
-</p>
-
-<p align="center">
-## Live Website
-
-🌐 https://shivalik-capital.github.io/
-
 # Shivalik Capital
 
-Independent Quantitative Investment Research
+Independent quantitative investment research, systematic strategy development, and macroeconomic analysis.
 
-</p>
+🌐 https://shivalik-capital.github.io/
 
 **Independent quantitative investment research, systematic strategy development, and macroeconomic analysis.**
 
