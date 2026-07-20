@@ -14,7 +14,15 @@
 
 </p>
 
+[Banner]
+
+<p align="center">
+
 # Shivalik Capital
+
+Independent Quantitative Investment Research
+
+</p>
 
 **Independent quantitative investment research, systematic strategy development, and macroeconomic analysis.**
 
