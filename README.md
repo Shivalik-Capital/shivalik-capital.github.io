@@ -14,8 +14,6 @@
 
 </p>
 
-[Banner]
-
 <p align="center">
 
 # Shivalik Capital
