@@ -96,7 +96,13 @@
         }
 
         /* Results table */
+        
+        .letter-container {
+            max-width: 900px;
+        }
+        
         .results-table {
+
             width: 100%;
             border-collapse: collapse;
             margin: 32px 0;
@@ -104,8 +110,8 @@
         }
 
         .results-table th {
-            font-size: 11px;
-            letter-spacing: 2px;
+            font-size: 10px;
+            letter-spacing: 1px;
             text-transform: uppercase;
             color: #555;
             text-align: left;
@@ -150,8 +156,8 @@
         .back-link {
             display: inline-block;
             margin: 60px 0 0;
-            font-size: 11px;
-            letter-spacing: 2px;
+            font-size: 10px;
+            letter-spacing: 1px;
             text-transform: uppercase;
             color: #c9a84c;
             text-decoration: none;
@@ -168,6 +174,18 @@
             line-height: 1.7;
         }
     </style>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+    </script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 </head>
 <body>
 
@@ -220,11 +238,11 @@
 <p>This formulation systematically penalizes securities exhibiting high return dispersion, preferring smooth, persistent appreciators over volatile outliers.</p>
 <h3>2.3 Factor 3: Institutional Volume Surge</h3>
 <p>The volume surge ratio $U_i^{(t)}$ for security $i$ at rebalancing date $t$ is computed as the ratio of the short-term simple moving average volume to the long-term simple moving average volume:</p>
-<p>$$U_i^{(t)} = \frac{\text{SMA}<em>{21}(V</em>{i,t})}{\text{SMA}<em>{126}(V</em>{i,t})} = \frac{\frac{1}{21}\sum_{k=0}^{20} V_{i,t-k}}{\frac{1}{126}\sum_{k=0}^{125} V_{i,t-k}}$$</p>
+<p>$$U_i^{(t)} = \frac{\text{SMA}_{21}(V_{i,t})}{\text{SMA}_{126}(V_{i,t})} = \frac{\frac{1}{21}\sum_{k=0}^{20} V_{i,t-k}}{\frac{1}{126}\sum_{k=0}^{125} V_{i,t-k}}$$</p>
 <p>where $V_{i,t-k}$ denotes the unadjusted trading volume of security $i$ at day $t-k$. Values of $U_i^{(t)} &gt; 1$ indicate recent volume acceleration above the longer-term baseline, consistent with institutional accumulation activity.</p>
 <h3>2.4 Factor Normalization and Composite Score Compilation</h3>
 <p>Each of the three raw factor scores is cross-sectionally Z-score normalized at each rebalancing date $t$ across the eligible security universe $\mathcal{N}_t$ (defined in Section 3.1):</p>
-<p>$$\tilde{F}<em>{i}^{(t)} = \frac{F</em>{i}^{(t)} - \mu_{F}^{(t)}}{\sigma_{F}^{(t)}}$$</p>
+<p>$$\tilde{F}_{i}^{(t)} = \frac{F_{i}^{(t)} - \mu_{F}^{(t)}}{\sigma_{F}^{(t)}}$$</p>
 <p>where $\mu_{F}^{(t)}$ and $\sigma_{F}^{(t)}$ are the cross-sectional mean and standard deviation of factor $F \in {M, V, U}$ across all $n$ securities in $\mathcal{N}_t$ at time $t$.</p>
 <p>The Composite Momentum Score $C_i^{(t)}$ is then constructed as an equal-weight linear combination of the three normalized factors:</p>
 <p>$$C_i^{(t)} = \frac{1}{3}\tilde{M}_i^{(t)} + \frac{1}{3}\tilde{V}_i^{(t)} + \frac{1}{3}\tilde{U}_i^{(t)}$$</p>
@@ -232,7 +250,7 @@
 <p>Let $\mathcal{S}_t = {i : \text{rank}(C_i^{(t)}) \leq 10}$ denote the set of the top 10 securities by composite score at rebalancing date $t$. The portfolio weight vector $\mathbf{w}^{(t)}$ is defined under an equal-weight allocation scheme:</p>
 <p>$$w_i^{(t)} = \begin{cases} \frac{1}{10} &amp; \text{if } i \in \mathcal{S}_t \ 0 &amp; \text{otherwise} \end{cases}$$</p>
 <p>The portfolio is fully rebalanced on the first trading day of each calendar month. Net-of-friction monthly return is computed as:</p>
-<p>$$R_p^{(t)} = \sum_{i \in \mathcal{S}<em>t} w_i^{(t)} r</em>{i,t} - \tau \cdot \text{TO}^{(t)}$$</p>
+<p>$$R_p^{(t)} = \sum_{i \in \mathcal{S}_t} w_i^{(t)} r_{i,t} - \tau \cdot \text{TO}^{(t)}$$</p>
 <p>where $\tau = 0.001$ (0.1%) represents the per-side transaction friction coefficient, and $\text{TO}^{(t)}$ is the one-way portfolio turnover rate at rebalancing date $t$, defined as:</p>
 <p>$$\text{TO}^{(t)} = \frac{1}{2}\sum_{i} \left| w_i^{(t)} - w_i^{(t-1)} \right|$$</p>
 <hr />
